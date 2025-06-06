@@ -8,7 +8,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/argoproj/argo-cd.git
+      repoURL: https://github.com/parth-s-harness/argo-cd.git
       revision: HEAD
       directories:
       - path: applicationset/examples/git-generator-directory/cluster-addons/*
@@ -16,9 +16,9 @@ spec:
     metadata:
       name: '{{.path.basename}}'
     spec:
-      project: "my-project"
+      project: "7fbf1031"
       source:
-        repoURL: https://github.com/argoproj/argo-cd.git
+        repoURL: https://github.com/parth-s-harness/argo-cd.git
         targetRevision: HEAD
         path: '{{.path.path}}'
       destination:
