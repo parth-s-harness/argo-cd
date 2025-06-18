@@ -15,7 +15,7 @@ spec:
     metadata:
       name: '{{.ns}}-guestbook'
     spec:
-      project: 7fbf1031
+      project: default
       syncPolicy:
         automated: {}  
       source:
