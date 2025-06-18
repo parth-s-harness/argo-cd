@@ -16,6 +16,8 @@ spec:
       name: '{{.ns}}-guestbook'
     spec:
       project: 7fbf1031
+      syncPolicy:
+        automated: {}  
       source:
         repoURL: https://github.com/argoproj/argo-cd.git
         targetRevision: HEAD
