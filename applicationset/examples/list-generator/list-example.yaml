@@ -13,7 +13,7 @@ spec:
       - ns: engineering-prod
   template:
     metadata:
-      name: '{{.cluster}}-guestbook'
+      name: '{{.ns}}-guestbook'
     spec:
       project: 7fbf1031
       source:
