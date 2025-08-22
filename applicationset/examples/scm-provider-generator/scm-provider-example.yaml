@@ -9,6 +9,9 @@ spec:
   - scmProvider:
       github:
         organization: argoproj
+        tokenRef:
+          secretName: ACTUALSECRETNAME
+          key: ACTUALKEYNAME
       cloneProtocol: https
       filters:
       - repositoryMatch: example-apps
