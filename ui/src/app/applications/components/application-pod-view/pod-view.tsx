@@ -122,7 +122,7 @@ export class PodView extends React.Component<PodViewProps> {
                                 <div className='pod-view__nodes-container'>
                                     {groups.map(group => {
                                         if (group.type === 'node' && group.name === 'Unschedulable' && podPrefs.hideUnschedulable) {
-                                            return <React.Fragment />;
+                                            return null;
                                         }
                                         return (
                                             <div className={`pod-view__node white-box ${group.kind === 'node' && 'pod-view__node--large'}`} key={group.fullName || group.name}>
@@ -452,7 +452,7 @@ function formatSize(bytes: number) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
 
-function formatMetric(name: ResourceName, val: number) {
+export function formatMetric(name: ResourceName, val: number) {
     if (name === ResourceName.ResourceStorage || name === ResourceName.ResourceMemory) {
         // divide by 1000 to convert "milli bytes" to bytes
         return formatSize(val / 1000);
